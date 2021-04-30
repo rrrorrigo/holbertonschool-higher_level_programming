@@ -3,6 +3,9 @@ if __name__ == "__main__":
         from sys import argv
         import calculator_1
         l = len(argv)
+        if l != 4:
+                print("Usage: {:s} <a> <operator> <b>".format(argv[0]))
+                exit(1)
         op = ["+", "-", "*", "/"]
         a = int(argv[1])
         b = int(argv[3])
@@ -10,9 +13,6 @@ if __name__ == "__main__":
         sub = calculator_1.sub(a, b)
         mul = calculator_1.mul(a, b)
         div = calculator_1.div(a, b)
-        if l != 4:
-                print("Usage: {:s} <a> <operator> <b>".format(argv[0]))
-                exit(1)
         for i in range(0, l):
                 if operator[i] == argv[2]:
                         check = i
