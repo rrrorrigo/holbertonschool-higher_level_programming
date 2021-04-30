@@ -1,31 +1,19 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
         from sys import argv
-        import calculator_1
         l = len(argv)
         if l != 4:
                 print("Usage: {:s} <a> <operator> <b>".format(argv[0]))
                 exit(1)
-        op = ["+", "-", "*", "/"]
+        from calculator_1 import add, sub, mul, div
+        operator = ["+","-","*","/"]
         a = int(argv[1])
         b = int(argv[3])
-        add = calculator_1.add(a, b)
-        sub = calculator_1.sub(a, b)
-        mul = calculator_1.mul(a, b)
-        div = calculator_1.div(a, b)
-        for i in range(0, l):
-                if operator[i] == argv[2]:
-                        check = i
+        f = [add, sub, mul, div]
+        for i, check in enumerate(operator):
+                if check == argv[2]:
+                        print("{} {} {} = {}".format(a, check, b, f[i](a, b)))
                         break
-                check = -1
-        if check == -1:
+        else:
                 print("Unknown operator. Available operators: +, -, * and /")
                 exit(1)
-        elif op[check] == "+":
-                print("{:d} + {:d} = {:d}".format(a, b, add))
-        elif op[check] == "-":
-                print("{:d} - {:d} = {:d}".format(a, b, sub))
-        elif op[check] == "*":
-                print("{:d} * {:d} = {:d}".format(a, b, mul))
-        elif op[check] == "/":
-                print("{:d} / {:d} = {:d}".format(a, b, div))
