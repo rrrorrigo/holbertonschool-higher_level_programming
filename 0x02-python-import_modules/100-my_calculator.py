@@ -6,7 +6,7 @@ if __name__ == "__main__":
                 print("Usage: ./100-my_calculator.py <a> <operator> <b>")
                 exit(1)
         from calculator_1 import add, sub, mul, div
-        operator = ["+","-","*","/"]
+        operator = ["+", "-", "*", "/"]
         a = int(argv[1])
         b = int(argv[3])
         f = [add, sub, mul, div]
