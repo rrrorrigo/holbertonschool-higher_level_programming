@@ -2,11 +2,11 @@
 """ This is class named Square that defines a square """
 
 
-class Square:
+class Square():
         """ definition """
         def __init__(self, size=0):
-                """ Definition of private instance attribute size which is asigned with the double
-                underscore before the name
+                """ Definition of private instance attribute size which
+                is asigned with the double underscore before the name
 
                 Args:
                     size (int): private instance attribute.
