@@ -5,7 +5,7 @@
 class Square():
         """ definition """
         def __init__(self, size=0):
-                """ Definition of private instance attribute size 
+                """ Definition of private instance attribute size
                 which is asigned with the double underscore before the name
 
                 Args:
