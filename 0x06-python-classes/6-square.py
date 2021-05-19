@@ -39,7 +39,7 @@ class Square:
             """ definition of function that return the value"""
                 return self.__position
 
-        @size.setter
+        @position.setter
         def position(self, value):
             """ definition of function that set the value"""
                 for i in range(len(value)):
@@ -47,6 +47,7 @@ class Square:
                                 raise TypeError("position must be a tuple\
                                          of 2 positive integers")
                 self.__position = value
+
         def area(self):
                 """ Definition of function area that calculate
                 the area of the square"""
