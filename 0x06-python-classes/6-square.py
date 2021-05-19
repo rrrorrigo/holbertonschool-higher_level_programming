@@ -10,6 +10,7 @@ class Square:
 
                 Args:
                     size (int): private instance attribute.
+                    position (int, int): private instance attribute.
 
                 Raises:
                     TypeError: if `size` is not an integer
@@ -24,6 +25,11 @@ class Square:
                 """ getter function"""
                 return self.__size
 
+        @property
+        def position(self):
+            """ definition of function that return the value"""
+                return self.__position
+
         @size.setter
         def size(self, value):
                 """ setter func """
@@ -34,19 +40,16 @@ class Square:
                 else:
                         self.__size = value
 
-        @property
-        def position(self):
-            """ definition of function that return the value"""
-                return self.__position
-
         @position.setter
         def position(self, value):
             """ definition of function that set the value"""
-                for i in range(len(value)):
-                        if type(value[i]) is not int or i > 1 or value[i] < 0:
-                                raise TypeError("position must be a tuple\
- of 2 positive integers")
-                self.__position = value
+            if type(value) is not tuple or len(value) is not 2 or \
+               type(value[0]) is not int or value[0] < 0 or \
+               type(value[1]) is not int or value[1] < 0:
+                    raise TypeError("position must be a tuple of\
+ 2 positive integers")
+            else:
+                    self.__position = value
 
         def area(self):
                 """ Definition of function area that calculate
