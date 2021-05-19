@@ -10,7 +10,6 @@ class Square:
 
                 Args:
                     size (int): private instance attribute.
-                    position (int, int): private instance attribute.
 
                 Raises:
                     TypeError: if `size` is not an integer
@@ -27,7 +26,7 @@ class Square:
 
         @property
         def position(self):
-            """ definition of function that return the value"""
+                """ definition of function that return the position"""
                 return self.__position
 
         @size.setter
@@ -36,20 +35,19 @@ class Square:
                 if type(value) is not int:
                         raise TypeError("size must be an integer")
                 elif value < 0:
-                        raise ValueError("size must be >=0")
+                        raise ValueError("size must be >= 0")
                 else:
                         self.__size = value
 
         @position.setter
         def position(self, value):
-            """ definition of function that set the value"""
-            if type(value) is not tuple or len(value) is not 2 or \
-               type(value[0]) is not int or value[0] < 0 or \
-               type(value[1]) is not int or value[1] < 0:
-                    raise TypeError("position must be a tuple of\
- 2 positive integers")
-            else:
-                    self.__position = value
+                """ definition of function that set the value"""
+                a = "position must be a tuple of 2 positive integers"
+                if type(value) is not tuple or len(value) is not 2 or \
+                   type(value[0]) is not int or value[0] < 0 or \
+                   type(value[1]) is not int or value[1] < 0:
+                        raise TypeError(a)
+                self.__position = value
 
         def area(self):
                 """ Definition of function area that calculate
@@ -59,13 +57,11 @@ class Square:
         def my_print(self):
                 """ Definition of function that print the area of square"""
                 i = self.__size
-                position1 = self.position[1]
-                position2 = self.position[0]
 
                 if i == 0:
                         print("")
                 else:
-                        for spaces in range(position1):
+                        for spaces in range(self.__position[1]):
                                 print("")
                         for x in range(i):
                                 print(" " * self.position[0], end="")
