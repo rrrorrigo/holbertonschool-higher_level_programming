@@ -20,11 +20,15 @@ def matrix_divided(matrix, div):
     msg = "matrix must be a matrix (list of lists) of integers/floats"
     msg2 = "Each row of the matrix must have the same size"
 
-    for i in range(len(matrix)):
-        for ii in range(len(matrix[i])):
-            if type(matrix[i][ii]) not in [float, int]:
+    if len(matrix) == 0 or type(matrix) is not list:
+        raise TypeError(msg)
+    for i in matrix:
+        if type(i) is not list or len(i) is 0:
+            raise TypeError(msg)
+        for ii in i:
+            if type(ii) not in [float, int]:
                 raise TypeError(msg)
-        if len(matrix[0]) is not len(matrix[i]):
+        if len(i) is not len(matrix[0]):
             raise TypeError(msg2)
     if type(div) not in [int, float]:
         raise TypeError("div must be a number")
