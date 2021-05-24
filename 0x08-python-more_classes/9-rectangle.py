@@ -2,10 +2,6 @@
 """ Module with a Rectangle class"""
 
 
-from cmath import rect
-import re
-
-
 class Rectangle():
         """ class initialization"""
 
