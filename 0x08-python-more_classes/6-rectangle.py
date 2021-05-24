@@ -2,7 +2,6 @@
 """ Module with a Rectangle class"""
 
 
-
 class Rectangle():
         """ class initialization"""
 
@@ -87,7 +86,7 @@ class Rectangle():
                 p = "#" * self.__width
                 for i in range(self.__height - 1):
                         p += "\n"
-                        p += "#" *self.__width
+                        p += "#" * self.__width
                 return p
 
         def __repr__(self):
