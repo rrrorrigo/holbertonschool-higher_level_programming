@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-class LockedClass():
-        __slots__ = ['first_name']
+""" locked class"""
 
-        def __init__(self):
-                self.first_name = ""
+
+class LockedClass():
+        """ class without attribute and only can add first_name as attribute"""
+        __slots__ = ['first_name']
