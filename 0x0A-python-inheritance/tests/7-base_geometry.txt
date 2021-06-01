@@ -11,24 +11,24 @@ Importing class:
 Now use it:
 
         >>> x = bg()
-        >>> bg.integer_validator("random text", [1, 2, 3])
+        >>> x.integer_validator("random text", [1, 2, 3])
         Traceback (most recent call last):
         TypeError: random text must be an integer
 
-        >>> bg.integer_validator("random text", None)
+        >>> x.integer_validator("random text", None)
         Traceback (most recent call last):
         TypeError: random text must be an integer
 
-        >>> bg.integer_validator("random text", -1)
+        >>> x.integer_validator("random text", -1)
         Traceback (most recent call last):
         ValueError: random text must be greater than 0
 
-        >>> bg.integer_validator("random text", 0)
+        >>> x.integer_validator("random text", 0)
         Traceback (most recent call last):
         ValueError: random text must be greater than 0
 
-        >>> bg.integer_validator("random text", 1)
+        >>> x.integer_validator("random text", 1)
 
-        >>> bg.integer_validator("", -10)
+        >>> x.integer_validator("", -10)
         Traceback (most recent call last):
-        TypeError:  must be an integer
+        TypeError:  must be greater than 0

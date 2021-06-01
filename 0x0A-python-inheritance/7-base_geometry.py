@@ -3,10 +3,8 @@
 
 
 class BaseGeometry:
-    """ class base Geometry with area func that
-    raise an error always it called
-    """
     def area(self):
+        """func that raise an exception"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
