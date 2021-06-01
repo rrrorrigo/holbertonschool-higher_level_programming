@@ -32,3 +32,18 @@ Now use it:
         >>> x.integer_validator("", -10)
         Traceback (most recent call last):
         ValueError:  must be greater than 0
+
+	>>> x.integer_validator()
+	Traceback (most recent call last):
+   	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+	>>> x.integer_validator("random text")
+    	Traceback (most recent call last):
+    	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+	>>> x.area()
+	Traceback (most recent call last):
+    	Exception: area() is not implemented
+
+	>>> type(x) == bg
+    	True
