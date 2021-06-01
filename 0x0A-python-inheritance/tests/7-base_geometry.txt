@@ -31,4 +31,4 @@ Now use it:
 
         >>> x.integer_validator("", -10)
         Traceback (most recent call last):
-        TypeError:  must be greater than 0
+        ValueError:  must be greater than 0
