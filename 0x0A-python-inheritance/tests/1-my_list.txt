@@ -1,0 +1,32 @@
+The ``1-my_list`` module
+========================
+
+Using ``print_sorted``
+
+------------------------
+
+Importing class:
+        >>> MyList = __import__('1-my_list').MyList
+
+Now use it:
+
+        >>> my_list = MyList()
+        >>> my_list.append(32)
+        >>> my_list.append(12)
+        >>> my_list.append(16)
+        >>> my_list.append(20)
+        >>> my_list.append(42)
+        >>> my_list.print_sorted()
+        [12, 16, 20, 32, 42]
+
+        >>> my_list = MyList()
+        >>> my_list.print_sorted()
+        []
+
+        >>> my_list = MyList()
+        >>> isinstance(my_list, MyList)
+        True
+
+        >>> my_list = MyList()
+        >>> type(my_list) == MyList
+        True
