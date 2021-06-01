@@ -5,5 +5,4 @@
 class MyList(list):
     """ Function that print a list"""
     def print_sorted(self):
-        l = list(self)
-        print(sorted(l))
+        print(sorted(self))
