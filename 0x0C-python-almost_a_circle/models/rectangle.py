@@ -5,7 +5,7 @@ from base import Base
 class Rectangle(Base):
         """ class Rectangle inherits from Base"""
         def __init__(self, width, height, x=0, y=0, id=None):
-                super().__init__(id)
+                self.__id = super().__init__(id)
                 self.width = width
                 self.height = height
                 self.x = x
@@ -79,3 +79,9 @@ class Rectangle(Base):
                         for i in range(y):
                                 print('#', end="")
                         print("")
+
+        def __str__(self):
+                id = self.id
+                aux = "[Rectangle] {} {}/{}".format(id, self.__x, self.__y)
+                aux2 = " - {}/{}".format(self.__width, self.__height)
+                return aux + aux2
