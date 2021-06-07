@@ -93,8 +93,14 @@ class Rectangle(Base):
                 aux2 = " - {}/{}".format(self.__width, self.__height)
                 return aux + aux2
 
-        def update(self, *args):
+        def update(self, *args, **kwargs):
                 """ update method"""
                 arguments = ["id", "width", "height", "x", "y"]
-                for i in range(len(args)):
-                        setattr(self, arguments[i], args[i])
+                if args:
+                        for i in range(len(args)):
+                                setattr(self, arguments[i], args[i])
+                else:
+                        for i, ii in kwargs.items():
+                                if hasattr(self, i):
+                                        setattr(self, i, ii)
+                
