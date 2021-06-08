@@ -28,3 +28,7 @@ class Base:
                                 rlist.append(x.to_dictionary())
                 with open(filename, 'w', encoding="utf-8") as f:
                         f.write(cls.to_json_string(rlist))
+
+        def from_json_string(json_string):
+                """ Return an object representing by json string"""
+                return json.loads(json_string) if json_string else []
