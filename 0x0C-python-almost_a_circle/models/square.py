@@ -7,12 +7,11 @@ class Square(Rectangle):
         """ class square with init method"""
         def __init__(self, size, x=0, y=0, id=None):
                 super().__init__(size, size, x, y, id)
-                self.size = size
 
         def __str__(self):
             """ string representation"""
             msg = "[Square] ({}) {}".format(self.id, self.x)
-            return msg + "/{} - {}".format(self.y, self.size)
+            return msg + "/{} - {}".format(self.y, self.width)
 
         @property
         def size(self):
@@ -37,5 +36,5 @@ class Square(Rectangle):
 
         def to_dictionary(self):
                 """ dictionary representation method"""
-                return {'id': self.id, 'size': self.size,
+                return {'id': self.id, 'size': self.width,
                         'x': self.x, 'y': self.y}
