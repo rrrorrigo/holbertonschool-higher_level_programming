@@ -38,3 +38,10 @@ class Base:
         def from_json_string(json_string):
                 """ Return an object representing by json string"""
                 return json.loads(json_string) if json_string else []
+
+        @classmethod
+        def create(cls, **dictionary):
+                """ create a dummy object"""
+                aux = cls(1, 1)
+                aux.update(**dictionary)
+                return aux
