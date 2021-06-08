@@ -5,6 +5,7 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
         """ class square with init method"""
+
         def __init__(self, size, x=0, y=0, id=None):
                 """ initializer method"""
                 super().__init__(size, size, x, y, id)
@@ -26,6 +27,7 @@ class Square(Rectangle):
                 self.height = value
 
         def update(self, *args, **kwargs):
+                """ update method"""
                 arguments = ["id", "size", "x", "y"]
                 if args:
                         for i in range(len(args)):
