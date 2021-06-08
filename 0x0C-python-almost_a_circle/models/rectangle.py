@@ -90,7 +90,7 @@ class Rectangle(Base):
         def __str__(self):
                 """ string representation"""
                 id = self.id
-                aux = "[Rectangle] {} {}/{}".format(id, self.__x, self.__y)
+                aux = "[Rectangle] ({}) {}/{}".format(id, self.__x, self.__y)
                 aux2 = " - {}/{}".format(self.__width, self.__height)
                 return aux + aux2
 
