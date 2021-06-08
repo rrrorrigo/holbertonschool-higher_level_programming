@@ -2,6 +2,7 @@
 """ Class square"""
 from rectangle import Rectangle
 
+
 class Square(Rectangle):
         """ class square with init method"""
         def __init__(self, size, x=0, y=0, id=None):
@@ -36,5 +37,5 @@ class Square(Rectangle):
 
         def to_dictionary(self):
                 """ dictionary representation method"""
-                return {'id': self.id, 'size': self.size, 
-                'x': self.x, 'y': self.y}
+                return {'id': self.id, 'size': self.size,
+                        'x': self.x, 'y': self.y}

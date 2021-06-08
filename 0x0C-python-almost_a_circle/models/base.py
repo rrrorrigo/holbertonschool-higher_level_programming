@@ -2,10 +2,13 @@
 """ Class base"""
 import json
 
+
 class Base:
         """ main class called Base"""
         __nb_objects = 0
+
         def __init__(self, id=None):
+                """ initializer method"""
                 if id is not None:
                         self.id = id
                 else:

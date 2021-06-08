@@ -2,6 +2,7 @@
 """ Class base"""
 from base import Base
 
+
 class Rectangle(Base):
         """ class Rectangle inherits from Base"""
         def __init__(self, width, height, x=0, y=0, id=None):
@@ -106,5 +107,5 @@ class Rectangle(Base):
 
         def to_dictionary(self):
                 """ dictionary representation method"""
-                return {'id': self.id, 'width': self.__width, 
-                'height': self.__height, 'x': self.__x, 'y': self.__y}
+                return {'id': self.id, 'width': self.__width,
+                        'height': self.__height, 'x': self.__x, 'y': self.__y}
