@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Class base"""
 import json
+from os import path
 
 
 class Base:
@@ -45,3 +46,12 @@ class Base:
                 aux = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
                 aux.update(**dictionary)
                 return aux
+
+        def load_from_file(cls):
+                """ load from file method"""
+                filename = cls.__name__ + ".json"
+                x = []
+                if path.exist(filename):
+                        with open(filename, 'r') as f:
+                                x = json.load(f)
+                return x
