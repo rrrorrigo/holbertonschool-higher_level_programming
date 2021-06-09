@@ -47,11 +47,13 @@ class Base:
                 aux.update(**dictionary)
                 return aux
 
+        @classmethod
         def load_from_file(cls):
                 """ load from file method"""
                 filename = cls.__name__ + ".json"
                 x = []
-                if path.exist(filename):
+                if path.exists(filename):
                         with open(filename, 'r') as f:
-                                x = json.load(f)
+                                for i in cls.from_json_string(f.read()):
+                                        x.append(cls.create(**i))
                 return x
