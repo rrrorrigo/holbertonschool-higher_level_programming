@@ -4,4 +4,4 @@ exports.add = function add (a, b) {
     return ('NaN');
   }
   return (parseInt(a) + parseInt(b));
-}
+};
