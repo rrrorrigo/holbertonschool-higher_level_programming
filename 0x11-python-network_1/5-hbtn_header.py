@@ -9,4 +9,7 @@ if __name__ == '__main__':
         url = argv[1]
         value = "X-Request-Id"
         r = requests.get(url)
-        print(r.headers[value])
+        try:
+                print(r.headers[value])
+        except:
+                pass
