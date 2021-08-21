@@ -10,11 +10,15 @@ if __name__ == '__main__':
         owner = argv[2]
         r = requests.get("https://api.github.com/repos/{}/{}/commits"
                          .format(repository, owner))
-        data = r.json()
-        for i, req in enumerate(data):
-                if i < 10:
-                        sha = req.get('sha')
-                        author = req.get('commit').get('author').get('name')
-                        print("{}: {}".format(sha, author))
-                else:
-                        break
+        try:
+                data = r.json()
+                for i, req in enumerate(data):
+                        if i < 10:
+                                sha = req.get('sha')
+                                author = req.get('commit')\
+                                            .get('author').get('name')
+                                print("{}: {}".format(sha, author))
+                        else:
+                                break
+        except:
+                pass
