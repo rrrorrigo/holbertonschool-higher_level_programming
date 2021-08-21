@@ -8,8 +8,8 @@ from sys import argv
 if __name__ == '__main__':
         usr = argv[1]
         pwd = argv[2]
-        r = requests.get('https://api.github.com/user', auth=(usr, pwd))
         try:
+                r = requests.get('https://api.github.com/user', auth=(usr, pwd))
                 data = r.json()
                 print(data['id'])
         except:
