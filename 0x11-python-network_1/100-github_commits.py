@@ -9,7 +9,7 @@ if __name__ == '__main__':
         repository = argv[1]
         owner = argv[2]
         r = requests.get("https://api.github.com/repos/{}/{}/commits"
-                         .format(repository, owner))
+                         .format(owner, repository))
         try:
                 data = r.json()
                 for i, req in enumerate(data):
